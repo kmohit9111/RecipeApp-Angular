@@ -27,6 +27,10 @@ export class RecipeService {
     return this.recipes.slice(); //slice because we want copy of this recipes array not the actual one becuase by default array and objects are reference types in js
   }
 
+  getRecipe(index: number) {
+    return this.recipes[index];
+  }
+
   addIngredientsToShoppingList(ingredients: Ingredient[]) {
     this.slService.addIngredients(ingredients);
   }
